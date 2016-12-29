@@ -9,7 +9,6 @@
  */
 angular.module('ecampusApp')
   .controller('HomeBulletinsBoardCtrl', ['$scope', 'Api', function ($scope, Api) {
-    $scope.loader = false;
     $scope.errorMessage = '';
     $scope.tab = 1;
 
@@ -29,31 +28,16 @@ angular.module('ecampusApp')
     function loadBoards() {
       var url = '/Board/All';
 
-      $scope.loader = true;
-
       Api.execute("GET", url)
-        .done(function (response) {
+        .then(function (response) {
           $scope.boardsList = response;
-          $scope.loader = false;
 
           sortBoards($scope.boardsList);
           $scope.allBoards = getAllBoards();
           $scope.boardsForProfile = getBoardsForProfile();
           $scope.boardsForSubdivision = getBoardsForSubdivision();
 
-          $scope.$apply();
-        })
-        .fail(function (result) {
-          $scope.loader = false;
-
-          if (result.status === 401) {
-            $scope.errorMessage = "Потрібно авторизуватися";
-          } else {
-            $scope.errorMessage = "Помилка на стороні сервера";
-          }
-
-          $scope.$apply();
-        })
+        });
     }
 
     function getAllBoards() {

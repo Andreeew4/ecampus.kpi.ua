@@ -290,7 +290,7 @@ header .logo {
   height: 51px;
   margin-bottom: 0;
   float: left;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .logo-green {
@@ -637,23 +637,66 @@ a.bulletin-title:hover {
 }*/
 
 /* disciplines choice styles*/
+.btn-save-choice-result {
+  margin: 10px 0 10px 0;
+}
+
+.info-load {
+  color: #208843;
+}
+
+.panel .active .disciplines-panel {
+  cursor: default;
+}
+
+.disciplines-subdivision-name {
+  color: gray;
+}
+
+.disciplines-students-count {
+  color: gray;
+}
+
+.selective-disciplines-wrapper {
+  margin-top: 15px;
+}
 
 .panel-title-image {
   text-align: center;
-  min-height: 60px;
-  font-size: 24px;
-  line-height: 60px;
+  min-height: 30px;
+  font-size: 18px;
+  line-height: 30px;
   margin: 0 0 0 0;
-  background: url("../images/home/open-book.png") no-repeat;
-  background-size: 60px 60px;
+  background: url("/images/home/open-book.png") no-repeat;
+  background-size: 30px 30px;
 }
 
-.panel-title.disciplines-header {
+@media screen and (max-width: 430px) {
+  .panel-title-image {
+    min-height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 0 0;
+    background: url("/images/home/open-book.png") no-repeat;
+    background-size: 20px 20px;
+  }
+
+  .disciplines-header {
+    text-align: center;
+    min-height: 40px;
+    font-size: 1px;
+    line-height: 40px;
+    margin: 0 0 0 0;
+  }
+}
+
+.disciplines-header {
   text-align: center;
-  min-height: 60px;
-  font-size: 24px;
-  line-height: 60px;
-  margin: 0 0 0 0;
+  min-height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  margin: 0 0 20px 0;
+  color: #208843;
 }
 
 .specialization-info, .okr-info {
@@ -667,16 +710,30 @@ a.bulletin-title:hover {
 }
 
 .tab-pane.course {
-  margin: 0 15px 0 15px;
+  margin: 0 0 0 0;
   padding: 0 0 0 0;
+  cursor: default;
 }
 
-div.row.well.well-md.disciplines {
-  padding: 20px 0 20px 0;
+div.row.well.well-md.disciplines-info {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 15px;
+  border-radius: 0;
+}
+
+.selective-disciplines-navs {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.selective-disciplines-info {
+  padding-top: 0;
+  padding-right: 0;
 }
 
 div.row.account-info {
-  padding: 20px 15px 20px 15px;
+  padding: 0 15px 0 15px;
 }
 
 .course, .group, .start-year, .current-year {
@@ -687,6 +744,125 @@ div.row.account-info {
   overflow: hidden;
 }
 
+input[type="radio"].radio-disciplines-choice {
+  margin: 0 2px 0 2px;
+  position: relative;
+  left: 0;
+  vertical-align: baseline;
+}
+
+label.label-disciplines-choice {
+  padding-left: 0;
+}
+
+.loader {
+  height: 80px;
+  border: 1px solid #EEE;
+  text-align: center;
+  position: absolute;
+  width: 200px;
+  top: calc(50vh - (/* height */100px / 2));
+  left: calc(50vw - (/* width */140px / 2));
+  z-index: 1000;
+  background: #FFF;
+  padding: 10px;
+  margin-top: -70px;
+}
+
+.discipline-general-count {
+  margin-bottom: 0;
+  background-color: #ffffff;
+  border: solid #208843 1px;
+}
+
+div.progress-student-count {
+  color: white;
+}
+
+.nav > li > a.nav-pills-campus__item {
+  position: relative;
+  display: block;
+  padding: 0 0;
+}
+
+.choice-show-details {
+  color: #208843;
+  cursor: pointer;
+}
+
+/* end disciplines choice*/
+
+/* attestation styles */
+.select2 > .select2-choice.ui-select-match {
+  /* Because of the inclusion of Bootstrap */
+  height: 29px;
+}
+
+.selectize-control > .selectize-dropdown {
+  top: 36px;
+}
+
+.ui-select-bootstrap .ui-select-choices-row.active>span {
+  background-color: #208944;
+}
+
+.form-control:focus {
+  border-color: #208944;
+  outline: 0;
+  box-shadow: none;
+}
+
+.error-load-attest {
+  color: red;
+  margin-top: 10px;
+}
+
+.ui-select-bootstrap > .ui-select-choices, .ui-select-bootstrap > .ui-select-no-choice {
+  max-height: 400px;
+}
+
+.attest-menu, .attest-alert {
+  margin: 20px 0 20px 0;
+}
+.title-type-attest {
+  margin-top: 0;
+}
+.nav-pills-attest > li.active > a, .nav-pills-attest > li.active > a:hover, .nav-pills-attest > li.active > a:focus {
+  color: #fff;
+  background-color: #208944;
+}
+
+.attest-navigation > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  border: 1px solid #208944;
+  margin: 5px 5px 5px 5px;
+}
+
+.nav-pills-attest > li + li {
+  margin-left: 0;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #e8f3ec;
+}
+
+.btn-result {
+  margin: 20px 0
+}
+
+.lecturer-subdivision-name {
+  font-size: 12px;
+  font-style: italic
+}
+
+.student-study-group-name {
+  font-size: 12px;
+  font-style: italic
+}
+
+/* end attestation styles*/
 .study-profile,
 .item {
   padding-left: 30px;
@@ -776,8 +952,8 @@ div.row.account-info {
 .navigation > .container {
   margin-left: 0;
   margin-right: 0;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
   width: 100%;
 }
 

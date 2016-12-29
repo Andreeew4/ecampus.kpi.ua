@@ -286,11 +286,8 @@ module.exports = function (grunt) {
             [/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']
           ],
           css: [
-            [/(..\/fonts\/)/g, 'Fix webfonts path 1', function (match) {
-              return match.replace('../fonts/', '/fonts/');
-            }],
-            [/(\(fonts\/)/g, 'Fix webfonts path 2', function (match) {
-              return match.replace('(fonts/', '(fonts/');
+            [/((..\/fonts\/)|(\(fonts\/))/g, 'Fix webfonts path 1', function (match) {
+              return match.replace('../fonts/', '/fonts/').replace('(fonts/', '(/fonts/');
             }]
           ]
         }
@@ -405,7 +402,7 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             '*.{ico,png,txt}',
-            '.config',
+            '*.config',
             '*.html',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'

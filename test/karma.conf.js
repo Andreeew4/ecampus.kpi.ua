@@ -1,11 +1,13 @@
+'use strict';
+
 // Karma configuration
 // Generated on 2016-08-12
 
 module.exports = function(config) {
-  'use strict';
 
   config.set({
-    // enable / disable watching file and executing tests whenever any file changes
+    // enable / disable watching file and executing
+    // tests whenever any file changes
     autoWatch: true,
 
     // base path, that will be used to resolve files and exclude
@@ -30,6 +32,13 @@ module.exports = function(config) {
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-input-stars-directive/angular-input-stars.js',
+      'bower_components/kjur-jsrsasign/jsrsasign-latest-all-min.js',
+      'bower_components/jwt-decode/build/jwt-decode.js',
+      'bower_components/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
+      'bower_components/chosen/chosen.jquery.js',
+      'bower_components/angular-ui-tree/dist/angular-ui-tree.js',
+      'bower_components/angular-ui-select/dist/select.js',
+      'bower_components/angular-xeditable/dist/js/xeditable.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

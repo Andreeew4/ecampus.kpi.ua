@@ -1,0 +1,22 @@
+<breadcrumbs>
+  <!--<span>Модулi</span> >--> <span>Адміністрування</span> > <b>РНП</b>
+</breadcrumbs>
+
+<div class="container-fluid content">
+  <div class="row">
+    <div class="col-md-12">
+
+      <h1>РНП</h1>
+
+      <rnp-input></rnp-input>
+
+      <group-display ng-repeat="studyGroup in StudyGroups" group="studyGroup"></group-display>
+
+      <div class="alert alert-warning" ng-hide="errorLabelText===''" role="alert">{{errorLabelText}}</div>
+
+      <rnp-rows-display ng-show="RnpRows!= null" rows="RnpRows"></rnp-rows-display>
+
+    </div>
+  </div>
+</div>
+

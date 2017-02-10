@@ -8,6 +8,5 @@
  * Controller of the ecampusApp
  */
 angular.module('ecampusApp')
-  .controller('InformationCtrl', function () {
-    
+  .controller('InformationCtrl', function handler() {
   });

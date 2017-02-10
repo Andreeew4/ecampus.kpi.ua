@@ -2,13 +2,14 @@
 
 /**
  * @ngdoc function
- * @name ecampusApp.controller:StatisticCtrl
+ * @name ecampusApp.controller:IndividualPlanCtrl
  * @description
- * # StatisticCtrl
+ * # IndividualPlanCtrl
  * Controller of the ecampusApp
  */
-angular.module('ecampusApp')
-  .controller('StatisticCtrl', function () {
+angular
+  .module('ecampusApp')
+  .controller('IndividualPlanCtrl', function handler() {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
